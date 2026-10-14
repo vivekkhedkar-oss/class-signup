@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Signup</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="card">
+      <header class="card__header">
+        <h1>Class Signup</h1>
+        <p class="subtitle">Add your name to the roster below.</p>
+      </header>
+
+      <p id="demo-banner" class="demo-banner" hidden>
+        Demo mode: sample data stored only in your browser.
+      </p>
+
+      <form id="signup-form" class="signup-form" novalidate>
+        <label for="name-input" class="visually-hidden">Your name</label>
+        <input
+          id="name-input"
+          name="name"
+          type="text"
+          placeholder="Your full name"
+          autocomplete="name"
+          required
+        />
+        <button type="submit" id="submit-btn">Sign up</button>
+      </form>
+
+      <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+
+      <section class="roster">
+        <div class="roster__header">
+          <h2>Signed up</h2>
+          <span id="roster-count" class="roster__count"></span>
+        </div>
+
+        <div id="roster-status" class="roster-status" role="status" aria-live="polite"></div>
+
+        <ul id="roster-list" class="roster-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
